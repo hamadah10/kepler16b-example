@@ -15,16 +15,23 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+
     - name: Setup JDK
       uses: actions/setup-java@v3
       with:
         java-version: '21'
         distribution: 'temurin'
+
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
+
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+
     - name: Build
       run: ./gradlew build
-    - name: Upload
+
+    - name: Upload build artifacts
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
