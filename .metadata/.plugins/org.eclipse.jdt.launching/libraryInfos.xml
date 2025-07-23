@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Users\aalha\Downloads\rosetta-2.12.0-win32.win32.x86_64\Rosetta\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.14.v20250130-2147" version="17.0.14">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\aalha\Downloads\rosetta-2.12.0-win32.win32.x86_64\Rosetta\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.14.v20250130-2147\jre" version="17.0.14"/>
+</libraryInfos>
