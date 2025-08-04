@@ -1,0 +1,66 @@
+// The Gradle task dependencies
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'io.opencaesar.owl:owl-fuseki-gradle:2.9.0'
+    }
+}
+
+// The Maven coordinates for the project artifact
+ext.title = 'Tutorial2'
+description = 'This is tutorial2 example'
+group = 'com.example'
+version = '1.0.0'
+
+// The Gradle plugins
+apply plugin: 'base'
+
+//Dataset-specific variables
+ext {
+    // Name of dataset (matches one used in .fuseki.ttl file)
+    dataset = 'tutorial2'
+    // Root ontology IRI of the dataset
+    rootIri = 'http://example.com/tutorial2/description/bundle'
+}
+
+//The repositories to look up dependencies in
+repositories {
+    mavenLocal()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+// Start the headless Fuseki server
+task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
+    configurationPath = file('.fuseki.ttl')
+    outputFolderPath = file('.fuseki')
+    webUI = true
+}
+
+// Stop the headless Fuseki server
+task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
+    outputFolderPath = file('.fuseki')
+}
+
+//Define project's artifacts
+task omlZip(type: Zip, group:"oml") {
+    from file('src/oml')
+    include "**/*.oml"
+    destinationDirectory = file('build/libs')
+    archiveBaseName = project.name
+    archiveVersion = project.version
+}
+
+artifacts.default omlZip
+
+//A task to check the project's build artifacts
+tasks.named('check') {
+    // Basic check task
+}
+
+//Integration with the Eclipse IDE
+apply plugin: 'eclipse'
