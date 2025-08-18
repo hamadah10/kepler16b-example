@@ -1,0 +1,17 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/ahmed/.m2/repository/org/apache/jena/jena-fuseki-server/4.6.1/jena-fuseki-server-4.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/ahmed/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.18.0/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2025-08-18 00:21:54] Server     INFO  Apache Jena Fuseki 4.6.1
+[2025-08-18 00:21:54] Server     INFO  Incoming connections limited to localhost
+[2025-08-18 00:21:54] Config     INFO  FUSEKI_HOME=/Users/ahmed/Downloads/Rosetta.app/Contents/MacOS/workspace/tutorial2/fuseki/.
+[2025-08-18 00:21:54] Config     INFO  FUSEKI_BASE=/Users/ahmed/Downloads/Rosetta.app/Contents/MacOS/workspace/tutorial2/fuseki/run
+[2025-08-18 00:21:54] Config     INFO  Shiro file: file:///Users/ahmed/Downloads/Rosetta.app/Contents/MacOS/workspace/tutorial2/fuseki/run/shiro.ini
+[2025-08-18 00:21:55] Server     INFO  Path = /tutorial2
+[2025-08-18 00:21:55] Server     INFO  System
+[2025-08-18 00:21:55] Server     INFO    Memory: 2.0 GiB
+[2025-08-18 00:21:55] Server     INFO    Java:   21.0.7
+[2025-08-18 00:21:55] Server     INFO    OS:     Mac OS X 12.6.5 x86_64
+[2025-08-18 00:21:55] Server     INFO    PID:    1516
+[2025-08-18 00:21:55] Server     INFO  Started 2025/08/18 00:21:55 MST on port 3030

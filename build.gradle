@@ -118,8 +118,8 @@ task generateDocs(type: io.opencaesar.owl.doc.OwlDocTask, dependsOn: owlReason) 
  * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-doc/README.md
  */
 task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
-    configurationPath = file('.fuseki.ttl')
-    outputFolderPath = file('.fuseki')
+    configurationPath = file('fuseki.ttl')
+    outputFolderPath = file('fuseki')
     webUI = true
 }
 
@@ -128,7 +128,7 @@ task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
  * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-fuseki/README.md
  */
 task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
-    outputFolderPath = file('.fuseki')
+    outputFolderPath = file('fuseki')
 }
 
 /*
